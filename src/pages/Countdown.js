@@ -36,21 +36,19 @@ export default function Coundown() {
             </div>
 
 
-            <div className='m-auto flex flex-col bg-white bg-opacity-25'>
+            <div className='m-auto mt-5 flex flex-col bg-white bg-opacity-25'>
                 <p className='m-auto'>Value prop statement</p>
                 <p className='m-auto'>Problem / Solution</p>
                 <p className='m-auto'>{"Key life -> Key web -> Key Web 3.0 (Dynamism - Bring power of brain and mind to web3)"}</p>
             </div>
 
-            <div className='m-auto flex flex-row'>
-                <p className='m-auto text-xl'>Subscribe us</p>
-
+            <div className='m-auto mt-5 flex flex-row'>
                 <input type="text" className='ml-2 w-60 rounded-lg border-2 border-black text-xl h-10 text-center' required 
                     // onChange={(event) => {
                     //     setTitle(event.target.value);
                     // }}
                 />
-                <button className='ml-5 m-auto bg-[#4fd1c5] hover:brightness-125 rounded-lg bg-white w-32 h-10'>
+                <button className='ml-5 m-auto bg-[#4fd1c5] hover:brightness-125 rounded-lg bg-white w-24 h-10'>
                     Subscribe
                 </button>
             </div>
