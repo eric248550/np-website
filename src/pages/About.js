@@ -30,11 +30,12 @@ export default function About() {
                         <div className='h-2/3'></div>
                         <div className='h-1/3 flex bg-black opacity-50'>
                             <div className='m-auto'>
-                                <p className='text-white text-xs'>Neuroscientist, educator, musician, futurist. Artificial intelligence and blockchain entrepreneur. Mind-training, wellbeing, Spatial Web, human organization</p>
                                 <div className='flex flex-row'>
-                                    <p className='text-white text-sm font-bold'>Co-founder, Gabriel Axel Montes, Ph.D.</p>
-                                    <a className='text-blue-400 text-sm font-bold' target='_blank' href='https://www.linkedin.com/in/gabrielaxel/'>[LinkedIn]</a>
+                                    <p className='text-white text-xs font-bold'>Co-founder, Gabriel Axel Montes, Ph.D.</p>
+                                    <a className='text-blue-400 text-xs font-bold' target='_blank' href='https://www.linkedin.com/in/gabrielaxel/'>[LinkedIn]</a>
                                 </div>
+                                <p className='mt-2 text-white text-xs'>Neuroscientist, educator, musician, futurist. Artificial intelligence and blockchain entrepreneur. Mind-training, wellbeing, Spatial Web, human organization</p>
+
                             </div>
                         </div>
                     </div>
@@ -43,11 +44,12 @@ export default function About() {
                         <div className='h-2/3'></div>
                         <div className='h-1/3 flex bg-black opacity-50'>
                             <div className='m-auto'>
-                                <p className='text-white text-xs'>Award-winning neuropsychologist. Academic researcher, University of California Los Angeles. Cognitive assessment professional.</p>
                                 <div className='flex flex-row'>
-                                    <p className='text-white text-sm font-bold'>Co-founder, Taylor Kuhn, Ph.D.</p>
-                                    <a className='text-blue-400 text-sm font-bold' target='_blank' href='https://www.linkedin.com/in/taylor-kuhn-a40a9b48/'>[LinkedIn]</a>
+                                    <p className='text-white text-xs font-bold'>Co-founder, Taylor Kuhn, Ph.D.</p>
+                                    <a className='text-blue-400 text-xs font-bold' target='_blank' href='https://www.linkedin.com/in/taylor-kuhn-a40a9b48/'>[LinkedIn]</a>
                                 </div>
+                                <p className='mt-2 text-white text-xs'>Award-winning neuropsychologist. Academic researcher, University of California Los Angeles. Cognitive assessment professional.</p>
+
                             </div>
                         </div>
                     </div>
