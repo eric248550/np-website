@@ -16,7 +16,7 @@ export default function Mint() {
     });
 
     async function mintNft() {
-
+        console.log(23)
     }
 
     function handleWallet() {
