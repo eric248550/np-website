@@ -19,7 +19,7 @@ function Timer({ expiryTimestamp }) {
 
 export default function Coundown() {
     return (
-        <div className="min-h-screen bg-cover flex flex-col bg-fixed bg-[url('./images/bg.png')]">
+        <div className="min-h-screen bg-cover flex flex-col  bg-[url('./images/bg.png')]">
             {/* Date.UTC(year, month-1, day, hour, minute, second, millisecond) */}
             {/* <div className='p-10'></div> */}
             <div className='mt-5 w-full flex flex-row bg-white bg-opacity-25'>

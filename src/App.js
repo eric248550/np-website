@@ -5,6 +5,7 @@ import HomeLayout from './layout/HomeLayout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Countdown from './pages/Countdown';
+import Mint from './pages/Mint';
 
 import './App.css';
 
@@ -16,11 +17,12 @@ export default function App() {
             parent route elements. See the note about <Outlet> below. */}
       <Routes>
             <Route path="/" element={<HomeLayout />}>
-                <Route index element={<Countdown />} />
+                <Route index element={<Home />} />
                 <Route path="home" element={<Home />} />
                 <Route path="about" element={<About />} />
+                <Route path="mint" element={<Mint />} />
 
-                <Route path="*" element={<Countdown />} />
+                <Route path="*" element={<Home />} />
             </Route>
       </Routes>
     </div>

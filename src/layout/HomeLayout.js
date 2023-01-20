@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useResolvedPath, useMatch } from "react-router-dom";
 
 
-import aiLogo from "../images/other_icon/ai-logo-blue.png";
-import pondLogo from "../images/other_icon/pong_logo.png";
-import logo from "../images/logo.png";
-import emoji from "../images/other_icon/emoji.png";
+import logoWhite from "../images/logo_white.png";
+import logoOnlyWhite from "../images/logo_only_white.png";
 
 
 import AlertModal from "../alert";
 
-import twitterIcon from "../images/social/twitter.png";
-import igIcon from "../images/social/ig.png";
-import fbIcon from "../images/social/fb.png";
-import disordIcon from "../images/social/discord.png";
+import twitterIcon from "../images/social/twitter.svg";
+import linkedinIcon from "../images/social/linkedin.svg";
 
 export default function HomeLayout() {
     const [alertInformation, setAlertInformation] = useState({
@@ -26,44 +22,40 @@ export default function HomeLayout() {
         <div>
             {/* A "layout route" is a good place to put markup you want to
                 share across all the pages on your site, like navigation. */}
-            <nav className="w-full bg-white flex-row border-black border-b-2">
-                <ul className="overflow-hidden">
-                    <li className="float-left">
-                        <Link to="/">
-                            <img className='mt-2 ml-2 w-60' src={logo}/>
-                        </Link>
-                    </li>
-                    <div className="flex flex-row float-right">
-                        <li>
-                            <Link to="/home">
-                                <p className="text-base text-black m-6">
-                                    Home
-                                </p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/about">
-                                <p className="text-base text-black m-6">
-                                    About
-                                </p>
-                            </Link>
-                        </li>
-                        <a target="_blank" href='https://twitter.com/'>
-                            <img className='hover:brightness-125 w-10 h-10 mt-4 ml-6' src={twitterIcon}/>
-                        </a>
-                        <a target="_blank" href='https://www.instagram.com/'>
-                            <img className='hover:brightness-125 w-10 h-10 mt-4 ml-2' src={igIcon}/>
-                        </a>
-                        <a target="_blank" href='https://www.facebook.com/'>
-                            <img className='hover:brightness-125 w-10 h-10 mt-4 ml-2' src={fbIcon}/>
-                        </a>
-                        <a target="_blank" href='https://discord.com/'>
-                            <img className='hover:brightness-125 w-10 h-10 mt-4 ml-2 mr-6' src={disordIcon}/>
-                        </a>
+            <nav className="w-full bg-[#292929] flex flex-row justify-between">
+                {/* <ul className="flex flex-row justify-center"> */}
+                    <Link className='w-1/3 hidden md:inline' to="/">
+                        <img className='m-2 ml-2 w-40 h-auto' src={logoWhite}/>
+                    </Link>
+                    <Link className='w-1/3 inline md:hidden' to="/">
+                        <img className='m-2 ml-2 w-8 h-auto' src={logoOnlyWhite}/>
+                    </Link>
+                    <div className="w-1/3 flex flex-row justify-center">
+                        <CustomLink to="/home">
+                            <p className="text-sm mt-4">
+                                Home
+                            </p>
+                        </CustomLink>
+                        <CustomLink to="/about">
+                            <p className="text-sm mt-4 ml-10">
+                                About
+                            </p>
+                        </CustomLink>
                     </div>
-                </ul>
+                    <div className="w-1/3 flex flex-row justify-center">
+                        <a target="_blank" href='https://twitter.com/neuralprint'>
+                            <img className='hover:brightness-125 w-10 h-10' src={twitterIcon}/>
+                        </a>
+                        {/* <div className='m-auto mx-5 rounded-full w-10 h-10 border-[#EBEBEB] border-2 opacity-10'> */}
+                        <a target="_blank" href='https://www.linkedin.com/company/neuralprint/'>
+                            <img className='ml-2 hover:brightness-125 w-10 h-10' src={linkedinIcon}/>
+                        </a>
+                        {/* </div> */}
+                    </div>
+
+                {/* </ul> */}
             </nav>
-            <hr />
+            {/* <hr /> */}
     
             {/* An <Outlet> renders whatever child route is currently active,
                 so you can think about this <Outlet> as a placeholder for
@@ -85,36 +77,52 @@ export default function HomeLayout() {
                 {alertInformation.content}
                 </AlertModal>
             )}
-            {/* <Footer /> */}
+            <Footer />
         </div>
+    );
+}
+
+function CustomLink({ children, to, ...props }) {
+    let resolved = useResolvedPath(to);
+    let match = useMatch({ path: resolved.pathname, end: true });
+    
+    return (
+      <div>
+        <Link className={`${match ? "text-white" : "text-white opacity-60"}`}
+            to={to}
+            {...props}
+        >
+            {children}
+            {/* {match
+                ?<p className='w-1 h-1 bg-white rounded-full'></p>
+                :""
+            } */}
+        </Link>
+        {/* {match && " (active)"} */}
+      </div>
     );
 }
 
 function Footer() {
     return(
         <div className='relative bottom-0 w-full h-auto bg-[#121212]'>
-            <div className='flex flex-col md:flex-row justify-center'>
-                <a href='https://twitter.com/AIDEV_cardano' target='_blank' className='md:my-5 flex flex-row justify-center'>
-                    <p className=' text-white text-base'>
-                        Powered by AIDEV
+            <div className='m-auto py-5 w-5/6 flex flex-row justify-between'>
+                <div className='flex flex-col'>
+                    <img className='w-40 h-auto' src={logoWhite}/>
+                    <p className='text-white text-sm'>
+                        Neuralorint - © 2023 All Rights Reserved.
                     </p>
-                    <img className='w-6 h-6' src={aiLogo}/>
-                </a>
-                <a href='https://twitter.com/lendingpond_ada' target='_blank' className='md:mt-5 flex flex-row justify-center'>
-                    <p className=' text-white text-base'>
-                        and Stockpicka's Wallet
-                    </p>
-                    <img className='w-6 h-6' src={pondLogo}/>
-                </a>
-                <p className='md:ml-10 md:mt-6 text-white text-center text-sm'>
-                    © 2022 AIDEV All rights reserved
-                </p>
-            </div>
-            <div className='flex flex-row pb-5 m-auto justify-center'>
-                <p className='text-white text-xs'>
-                    Stockpicka's gift to The Ape Society
-                </p>
-                <img className='w-4 h-4' src={emoji}/>
+                </div>
+                <div className="my-auto flex flex-row justify-center">
+                    <a target="_blank" href='https://twitter.com/neuralprint'>
+                        <img className='hover:brightness-125 w-10 h-10' src={twitterIcon}/>
+                    </a>
+                    {/* <div className='m-auto mx-5 rounded-full w-10 h-10 border-[#EBEBEB] border-2 opacity-10'> */}
+                    <a target="_blank" href='https://www.linkedin.com/company/neuralprint/'>
+                        <img className='ml-2 hover:brightness-125 w-10 h-10' src={linkedinIcon}/>
+                    </a>
+                    {/* </div> */}
+                </div>
             </div>
 
         </div>

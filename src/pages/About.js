@@ -1,14 +1,60 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
-import p1 from "../images/team/p.jpeg";
+import brain from "../images/icons/brain.png";
 
 export default function About() {
     return (
-        <div className="min-h-screen bg-cover flex flex-col bg-fixed bg-[url('./images/bg.png')]">
-            {/* <div className='p-10'></div> */}
+        <div className="flex flex-col bg-[#292929]">
 
-            <div className='flex flex-col bg-white bg-opacity-25 w-5/6 m-auto rounded-lg'>
+            <div className='min-h-screen flex flex-col w-5/6 m-auto'>
+                <p className='text-white text-center text-5xl font-bold'>About Neuralprint</p>
+
+                <p className='mt-5 text-base text-white'>Neuralprint is a company on a mission to bring the mind to the forefront of everyday life, to make technology feel like it's barely there, where the mind is able to grant access to all of reality, without barriers.</p>
+                <p className='mt-5 text-base text-white'>To do this, we're crafting products that leverage the stable and dynamic properties of the mind for everyday life. We see many existing technology products as placeholders for what the mind has the capability to do. Less is more. Our tech aims to remove gaps, not fill them.</p>
+                <p className='mt-5 text-base text-white'>Cybersecurity is increasingly a crucial ingredient as our lives are evermore always online. From simple logins to permissioning based on state of mind and task-dependent skill level, Neuralprint is the authentication of the future.</p>
+                <p className='mt-5 text-center text-base text-white'></p>
+                <p className='mt-5 text-center text-base text-white'></p>
+
+                <img className='m-auto mt-5 w-60 h-auto' src={brain}/>
+            </div>
+
+            <div className='min-h-screen flex flex-col w-5/6 m-auto'>
+                <p className='text-white text-center text-5xl font-bold'>About the Founders</p>
+
+                <p className='mt-5 text-base text-white'>Neuralprint was founded by two neuroscience PhD's and long-time friends Gabriel Axel Montes & Taylor Kuhn. Their passion for the mind and brain came together in a mission to usher a future where the mind is at the center of our digital lives. Gabriel’s expansive understanding of consciousness and mind-training revealed how vastly profound the mind is—and how underutilized it is in everyday life and tech. Taylor’s expertise in neuroimaging and clinical neuropsychological assessment has lent extensive first-hand practical and scientific experience with the cognitive landscapes of a large number of people.</p>
+                <p className='mt-5 text-white text-center text-2xl font-bold'>Know more about our Founders</p>
+            
+                <div className='flex flex-col md:flex-row justify-center'>
+                    <div className="w-80 h-80 flex flex-col bg-cover bg-[url('./images/team/Gabriel.png')]">
+                        <div className='h-2/3'></div>
+                        <div className='h-1/3 flex bg-black opacity-50'>
+                            <div className='m-auto'>
+                                <p className='text-white text-xs'>Neuroscientist, educator, musician, futurist. Artificial intelligence and blockchain entrepreneur. Mind-training, wellbeing, Spatial Web, human organization</p>
+                                <div className='flex flex-row'>
+                                    <p className='text-white text-sm font-bold'>Co-founder, Gabriel Axel Montes, Ph.D.</p>
+                                    <a className='text-blue-400 text-sm font-bold' target='_blank' href='https://www.linkedin.com/in/gabrielaxel/'>[LinkedIn]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='p-5'></div>
+                    <div className="w-80 h-80 flex flex-col bg-cover bg-[url('./images/team/Taylor.png')]">
+                        <div className='h-2/3'></div>
+                        <div className='h-1/3 flex bg-black opacity-50'>
+                            <div className='m-auto'>
+                                <p className='text-white text-xs'>Award-winning neuropsychologist. Academic researcher, University of California Los Angeles. Cognitive assessment professional.</p>
+                                <div className='flex flex-row'>
+                                    <p className='text-white text-sm font-bold'>Co-founder, Taylor Kuhn, Ph.D.</p>
+                                    <a className='text-blue-400 text-sm font-bold' target='_blank' href='https://www.linkedin.com/in/taylor-kuhn-a40a9b48/'>[LinkedIn]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className='flex flex-col bg-white bg-opacity-25 w-5/6 m-auto rounded-lg'>
                 <div className='p-10'></div>
                 <p className='m-auto text-4xl'>why and how NP was created</p>
                 
@@ -70,7 +116,7 @@ export default function About() {
                     </div>
                 </div>
 
-            </div>
+            </div> */}
             
 
 
