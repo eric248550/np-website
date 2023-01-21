@@ -14,17 +14,68 @@ export default function Mint() {
         isDisplayed: false,
         type: "information",
     });
+    const [email, setEmail] = useState();
 
+    function validateEmail (email) {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
     async function mintNft() {
-        console.log(23)
+        if (!email) {
+            setAlertInformation({
+                type: "information",
+                isDisplayed: true,
+                content: 'please input email first',
+            });
+            return;
+        }
+        if (!validateEmail(email)) {
+            setAlertInformation({
+                type: "information",
+                isDisplayed: true,
+                content: 'please input correct email format',
+            });
+            return;
+        }
+        const bucket_data = await (await fetch(
+            `http://localhost:8787/neuralprint/GetUserTestData/${email}`
+            // `https://api.aidev-cardano.com/neuralprint/GetUserTestData/${email}`
+        )).json();
+
+        if (bucket_data.error) {
+            setAlertInformation({
+                type: "information",
+                isDisplayed: true,
+                content: bucket_data.error,
+            });
+            return;
+        }
+
+        const bucket_data_jsonString = JSON.stringify(bucket_data, replacer);
+
+        function replacer(key, value) {
+            if (typeof value === "boolean" || typeof value === "number") {
+                return String(value);
+            }
+            return value;
+        }
+        const bucket_data_json = JSON.parse(bucket_data_jsonString)
+
+        handleWallet([bucket_data_json[0], bucket_data_json[1], bucket_data_json[2]]);
+        // eric248550@gmail.com
     }
 
-    function handleWallet() {
+    function handleWallet(data) {
+        // console.log(JSON.stringify(data).length)
         const type = 'mint';
         var metadata = {
           "ExampleName": {
             "image": "ipfs://QmRTrTgdoK9uxfCnk4dgsb6GfZ3zguFfQ9EXU6hVPBYrvv",
-            "name": "Example Name"
+            "name": "Example Name",
+            "data": data
           }
         }
         var metadata_string = encodeURIComponent(JSON.stringify(metadata)); 
@@ -38,26 +89,33 @@ export default function Mint() {
 
     return (
         <div className="flex flex-col bg-[#292929]">
-
             <div className='min-h-screen m-auto w-5/6 mt-10 flex flex-row justify-center'>
                 <div className='w-2/3 flex flex-col'>
                     <p className='text-white text-center text-4xl font-bold'>Get your NeuralPrint NFT</p>
                     <p className='mt-2 text-white text-base'>Our 6-minute psychometric test will securely capture your psychometric profile, which is then used to mint an NFT.</p>
                     <p className='mt-2 text-white text-base'>Your psychometric profile will be securely stored in the cloud in a GDPR-compliant manner, and, for security reasons, is not embedded in the metadata of the NFT.</p>
                     
-                    <button onClick={handleWallet} className='mt-5 bg-[#5E5D7F] hover:brightness-125 text-white font-bold w-60 h-12'>
-                        Mint your NeuralPrint NFT
-                    </button>
+                    <div className='mt-5 flex flex-row justify-start'>
+                        <input type="text" className='border-[1px] border-[868686] text-xl text-center w-60 h-12'
+                                placeholder='Type your email here..' 
+                                onChange={(event) => {
+                                    setEmail(event.target.value);
+                                }}
+                            />
+                        <button onClick={mintNft} className='bg-[#5E5D7F] hover:brightness-125 text-white font-bold w-60 h-12'>
+                            Mint your NeuralPrint NFT
+                        </button>
+                    </div>
 
                     <p className='mt-5 text-white text-base'> If you'd like to be in the loop on future utility of your nft, subscribe to our newsletter</p>
                     <div className='mt-5 flex flex-row justify-start'>
-                        <input type="text" className='border-[1px] border-[868686] text-xl text-center'
+                        <input type="text" className='border-[1px] border-[868686] text-xl text-center w-60 h-10'
                             placeholder='Type your email here..' 
                             // onChange={(event) => {
                             //     setTitle(event.target.value);
                             // }}
                         />
-                        <button className='h-10 bg-[#5F8E7A] hover:brightness-125 text-white font-bold'>
+                        <button className='w-60 h-10 bg-[#5F8E7A] hover:brightness-125 text-white font-bold'>
                             Subscribe
                         </button>
                     </div>
@@ -76,6 +134,22 @@ export default function Mint() {
                 </iframe>
             </div>
 
+            {alertInformation.isDisplayed && (
+                <AlertModal
+                type={alertInformation.type}
+                animateNumber={alertInformation.animateNumber}
+                bgNumber={alertInformation.bgNumber}
+                onClose={() =>
+                    setAlertInformation({
+                    type: "information",
+                    isDisplayed: false,
+                    content: null,
+                    })
+                }
+                >
+                {alertInformation.content}
+                </AlertModal>
+            )}
         </div>
     );
 }

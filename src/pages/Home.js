@@ -61,9 +61,9 @@ export default function Home() {
                         <button className="mt-5 m-auto bg-[#5E5D7F] hover:brightness-125 text-white w-52 h-12"
                             onClick={() => {
                                 setAlertInformation({
-                                type: "information",
-                                isDisplayed: false,
-                                content: null,
+                                    type: "information",
+                                    isDisplayed: false,
+                                    content: null,
                                 });
                                 confirmRef.current = true;
                                 location.replace('/mint');
