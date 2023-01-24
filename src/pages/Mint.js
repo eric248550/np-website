@@ -41,8 +41,8 @@ export default function Mint() {
             return;
         }
         const bucket_data = await (await fetch(
-            `http://localhost:8787/neuralprint/GetUserTestData/${email}`
-            // `https://api.aidev-cardano.com/neuralprint/GetUserTestData/${email}`
+            // `http://localhost:8787/neuralprint/GetUserTestData/${email}`
+            `https://api.aidev-cardano.com/neuralprint/GetUserTestData/${email}`
         )).json();
 
         if (bucket_data.error) {
