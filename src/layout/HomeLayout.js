@@ -22,33 +22,36 @@ export default function HomeLayout() {
         <div>
             {/* A "layout route" is a good place to put markup you want to
                 share across all the pages on your site, like navigation. */}
-            <nav className="w-full bg-[#292929] flex flex-row justify-between">
+            <nav className="pt-5 w-full bg-[#292929] flex flex-row justify-between">
                 {/* <ul className="flex flex-row justify-center"> */}
                     <Link className='w-1/3 hidden md:inline' to="/">
-                        <img className='m-2 ml-2 w-40 h-auto' src={logoWhite}/>
+                        <img className='ml-20 my-auto w-32 h-auto' src={logoWhite}/>
                     </Link>
                     <Link className='w-1/3 inline md:hidden' to="/">
-                        <img className='m-2 ml-2 w-8 h-auto' src={logoOnlyWhite}/>
+                        <img className='ml-5 my-auto w-8 h-auto' src={logoOnlyWhite}/>
                     </Link>
                     <div className="w-1/3 flex flex-row justify-center">
                         <CustomLink to="/home">
-                            <p className="text-sm mt-4">
+                            <p className="my-auto mt-2 md:mt-4 text-sm">
                                 Home
                             </p>
                         </CustomLink>
+
+                        <div className='p-10 hidden md:inline'></div>
+                        <div className='p-5 inline md:hidden'></div>
                         <CustomLink to="/about">
-                            <p className="text-sm mt-4 ml-10">
+                            <p className="my-auto mt-2 md:mt-4 text-sm">
                                 About
                             </p>
                         </CustomLink>
                     </div>
                     <div className="w-1/3 flex flex-row justify-center">
                         <a target="_blank" href='https://twitter.com/neuralprint'>
-                            <img className='hover:brightness-125 w-10 h-10' src={twitterIcon}/>
+                            <img className='my-auto hover:brightness-125 w-10 h-10' src={twitterIcon}/>
                         </a>
                         {/* <div className='m-auto mx-5 rounded-full w-10 h-10 border-[#EBEBEB] border-2 opacity-10'> */}
                         <a target="_blank" href='https://www.linkedin.com/company/neuralprint/'>
-                            <img className='ml-2 hover:brightness-125 w-10 h-10' src={linkedinIcon}/>
+                            <img className='ml-2 my-auto hover:brightness-125 w-10 h-10' src={linkedinIcon}/>
                         </a>
                         {/* </div> */}
                     </div>
@@ -109,7 +112,7 @@ function Footer() {
             <div className='m-auto py-5 w-5/6 flex flex-row justify-between'>
                 <div className='flex flex-col'>
                     <img className='w-40 h-auto' src={logoWhite}/>
-                    <p className='text-white text-sm'>
+                    <p className='mt-2 text-white text-[10px] md:text-sm'>
                         Neuralorint - © 2023 All Rights Reserved.
                     </p>
                 </div>

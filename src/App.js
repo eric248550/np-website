@@ -22,6 +22,7 @@ export default function App() {
                 <Route path="home" element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="mint" element={<Mint />} />
+                <Route path="countdown" element={<Countdown />} />
 
                 <Route path="*" element={<Home />} />
             </Route>

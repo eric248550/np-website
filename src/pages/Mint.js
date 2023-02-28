@@ -18,7 +18,6 @@ import fingerPrint from "../images/icons/fingerPrint.svg";
 
 import MultipleWalletApi, { Cardano } from '../nami-js';
 let walletApi;
-
 export default function Mint() {
     const confirmRef = useRef(false);
     const [alertInformation, setAlertInformation] = useState({
@@ -373,82 +372,86 @@ export default function Mint() {
 
     return (
         <div className="flex flex-col bg-[#292929]">
-            <div className='min-h-screen m-auto w-5/6 mt-10 flex flex-row justify-center'>
-                <div className='w-2/3 flex flex-col'>
-                    <p className='text-white text-center text-4xl font-bold'>Get your NeuralPrint NFT</p>
-                    <p className='mt-2 text-white text-base'>Our 6-minute psychometric test will securely capture your psychometric profile, which is then used to mint an NFT.</p>
-                    <p className='mt-2 text-white text-base'>Your psychometric profile will be securely stored in the cloud in a GDPR-compliant manner, and, for security reasons, is not embedded in the metadata of the NFT.</p>
+            <div className='m-auto w-5/6 mt-10 flex flex-col md:flex-row justify-center'>
+
+                <div className='w-full md:w-1/2 flex flex-col'>
+                    <p className='text-white text-center md:text-left text-2xl md:text-5xl font-bold'>Get your NeuralPrint NFT</p>
+                    <img className='inline md:hidden m-auto w-1/2' src={brain}/>
                     
-                    <div className='mt-5 flex flex-col md:flex-row justify-start'>
+                    <p className='mt-2 text-white text-sm md:text-base'>Our 6-minute psychometric test will securely capture your psychometric profile, which is then used to mint an NFT.</p>
+                    <p className='mt-2 text-white text-sm md:text-base'>Your psychometric profile will be securely stored in the cloud in a GDPR-compliant manner, and, for security reasons, is not embedded in the metadata of the NFT.</p>
+                    <p className='mt-2 text-white text-sm md:text-base'>Connect your wallet and input email to mint NFT</p>
+                    
+                    <Select
+                        className="w-full md:w-96 text-black text-center text-base"
+                        placeholder={"select wallet"}
+                        onChange={connect}
+                        options={[
+                            { value: 'eternl', label: 
+                                <div className="justify-center flex flex-row items-center">
+                                    <img src={eternlIcon} width={30} height={30}/>
+                                    {/* <p>&nbsp;&nbsp;Eternl</p> */}
+                                </div>
+                            },
+                            { value: 'nami', label: 
+                                <div className="justify-center flex flex-row items-center">
+                                    <img src={namiIcon} width={30} height={30}/>
+                                    {/* <p>&nbsp;&nbsp;Nami</p> */}
+                                </div>
+                            },
+                            { value: 'typhoncip30', label: 
+                                <div className="justify-center flex flex-row items-center">
+                                    <img src={typhonIcon} width={30} height={30}/>
+                                    {/* <p>&nbsp;&nbsp;Typhon</p> */}
+                                </div>
+                            },
+                            { value: 'flint', label: 
+                                <div className="justify-center flex flex-row items-center">
+                                    <img src={flintIcon} width={30} height={30}/>
+                                    {/* <p>&nbsp;&nbsp;Flint</p> */}
+                                </div>
+                            },
+                            { value: 'gerowallet', label: 
+                            <div className="justify-center flex flex-row items-center">
+                                <img src={geroIcon} width={30} height={30}/>
+                                {/* <p>&nbsp;&nbsp;Gero</p> */}
+                            </div>
+                            },
+                        ]}
+                    />
+                    <div className='mt-5 flex flex-row justify-start'>
                         <input type="text" className='border-[1px] border-[868686] text-xl text-center w-60 h-10'
-                                placeholder='Type your email here..' 
+                                placeholder='Type email here..' 
                                 onChange={(event) => {
                                     setEmail(event.target.value);
                                 }}
                             />
-                        <button onClick={mintNft} className='bg-[#5E5D7F] hover:brightness-125 text-white font-bold w-32 h-10'>
+                        <button onClick={mintNft} className='bg-[#5E5D7F] hover:brightness-125 text-white font-bold w-36 h-10'>
                             Mint NFT
                         </button>
                         {/* <div className='flex justify-center'> */}
-                            <Select
-                                className="w-32 text-black text-center text-base"
-                                // defaultValue={''}
-                                placeholder={"wallet"}
-                                onChange={connect}
-                                options={[
-                                    { value: 'eternl', label: 
-                                        <div className="justify-center flex flex-row items-center">
-                                            <img src={eternlIcon} width={30} height={30}/>
-                                            {/* <p>&nbsp;&nbsp;Eternl</p> */}
-                                        </div>
-                                    },
-                                    { value: 'nami', label: 
-                                        <div className="justify-center flex flex-row items-center">
-                                            <img src={namiIcon} width={30} height={30}/>
-                                            {/* <p>&nbsp;&nbsp;Nami</p> */}
-                                        </div>
-                                    },
-                                    { value: 'typhoncip30', label: 
-                                        <div className="justify-center flex flex-row items-center">
-                                            <img src={typhonIcon} width={30} height={30}/>
-                                            {/* <p>&nbsp;&nbsp;Typhon</p> */}
-                                        </div>
-                                    },
-                                    { value: 'flint', label: 
-                                        <div className="justify-center flex flex-row items-center">
-                                            <img src={flintIcon} width={30} height={30}/>
-                                            {/* <p>&nbsp;&nbsp;Flint</p> */}
-                                        </div>
-                                    },
-                                    { value: 'gerowallet', label: 
-                                    <div className="justify-center flex flex-row items-center">
-                                        <img src={geroIcon} width={30} height={30}/>
-                                        {/* <p>&nbsp;&nbsp;Gero</p> */}
-                                    </div>
-                                    },
-                                ]}
-                            />
+
                         {/* </div> */}
                     </div>
 
                     <p className='mt-5 text-white text-base'> If you'd like to be in the loop on future utility of your nft, subscribe to our newsletter</p>
                     <div className='mt-5 flex flex-row justify-start'>
                         <input type="text" className='border-[1px] border-[868686] text-xl text-center w-60 h-10'
-                            placeholder='Type your email here..' 
+                            placeholder='Type email here..' 
                             onChange={(event) => {
                                 setEmail(event.target.value);
                             }}
                         />
-                        <button onClick={provideEmail} className='w-60 h-10 bg-[#5F8E7A] hover:brightness-125 text-white font-bold'>
+                        <button onClick={provideEmail} className='w-36 h-10 bg-[#5F8E7A] hover:brightness-125 text-white font-bold'>
                             Subscribe
                         </button>
                     </div>
-
                    
                 </div>
-                <img className='m-auto w-1/3' src={brain}/>
+                <div className='p-10'></div>
+                <img className='hidden md:inline m-auto w-1/3' src={brain}/>
             </div>
-            <div className='m-auto w-5/6 mb-5 '>
+            <div className='m-auto mt-10 w-5/6 mb-5 '>
                 <iframe id="inlineFrameExample"
                 className='w-full min-h-screen'
                     title="Inline Frame Example"
