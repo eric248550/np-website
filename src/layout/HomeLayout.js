@@ -32,7 +32,7 @@ export default function HomeLayout() {
                     </Link>
                     <div className="w-1/3 flex flex-row justify-center">
                         <CustomLink to="/home">
-                            <p className="my-auto mt-2 md:mt-4 text-sm">
+                            <p className="my-auto mt-2 md:mt-4 text-lg">
                                 Home
                             </p>
                         </CustomLink>
@@ -40,7 +40,7 @@ export default function HomeLayout() {
                         <div className='p-10 hidden md:inline'></div>
                         <div className='p-5 inline md:hidden'></div>
                         <CustomLink to="/about">
-                            <p className="my-auto mt-2 md:mt-4 text-sm">
+                            <p className="my-auto mt-2 md:mt-4 text-lg">
                                 About
                             </p>
                         </CustomLink>

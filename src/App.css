@@ -3,17 +3,25 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url(//db.onlinewebfonts.com/c/d5f93e1b825e0f1729dc143050cadf84?family=Semplicita+Pro);
+
+@font-face {
+  font-family: 'SemplicitaPro';
+  src: url('font/SemplicitaPro-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 *{
     font-family: 'Futura Lt BT', sans-serif;
     transition: color 0.1s ease-in-out, background-color 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
-
 .button-effect {
   /* margin: 38px; */
   /* min-width: 300px;
   min-height: 60px; */
-  font-family: "Nunito", sans-serif;
+  font-family: "Futura Lt BT", sans-serif;
   /* font-size: 22px; */
   /* text-transform: uppercase; */
   letter-spacing: 1.3px;

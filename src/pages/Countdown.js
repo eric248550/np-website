@@ -10,7 +10,7 @@ import phone from "../images/phone.svg";
 //         // setSaleTimer(true);
 //     }});
 //     return (
-//         <div className='m-auto text-black text-center text-xl font-semibold'>
+//         <div className='m-auto text-black text-center text-xl font-[SemplicitaPro]'>
 //             <span>&nbsp;{`${days} `}</span>D
 //             <span>&nbsp;{` ${hours} `}</span>H
 //             <span>&nbsp;{` ${minutes} `}</span>M
@@ -52,25 +52,25 @@ export default function Coundown() {
                     <div className="m-auto flex flex-col bg-[#292929] w-96">
                         <div className='m-auto w-5/6'>
                             <img className='m-auto mt-5 w-40 h-auto' src={logoWhite}/>
-                            <p className='mt-5 text-white text-base font-bold'>
+                            <p className='mt-5 text-white text-base font-[SemplicitaPro]'>
                                 Requirements to get architype NFT:
                             </p>
                             <div className='mt-5 flex flex-col justify-center'>
                                 <div className='mt-2 flex flex-row'>
                                     <img className='my-auto w-6 h-6' src={fingerPrint}/>
-                                    <p className='ml-2 text-center text-xs text-white font-extrabold'>
+                                    <p className='ml-2 text-center text-xs text-white font-[SemplicitaPro]'>
                                         Sed ut perspiciatis unde omnis iste natus error sit
                                     </p>
                                 </div>
                                 <div className='mt-2 flex flex-row'>
                                     <img className='my-auto w-6 h-6' src={fingerPrint}/>
-                                    <p className='ml-2 text-center text-xs text-white font-extrabold'>
+                                    <p className='ml-2 text-center text-xs text-white font-[SemplicitaPro]'>
                                         Sed ut perspiciatis unde omnis iste natus error sit
                                     </p>
                                 </div>
                                 <div className='mt-2 flex flex-row'>
                                     <img className='my-auto w-6 h-6' src={fingerPrint}/>
-                                    <p className='ml-2 text-center text-xs text-white font-extrabold'>
+                                    <p className='ml-2 text-center text-xs text-white font-[SemplicitaPro]'>
                                         Sed ut perspiciatis unde omnis iste natus error sit
                                     </p>
                                 </div>
@@ -91,7 +91,7 @@ export default function Coundown() {
                                 location.replace('/mint');
                             }}
                         >
-                            <p className='text-sm text-white font-bold'>
+                            <p className='text-sm text-white font-[SemplicitaPro]'>
                                 TAKE NEURALPRINT TEST
                             </p>
                         </button>
@@ -148,13 +148,13 @@ export default function Coundown() {
                     <div className="m-auto flex flex-col bg-[#292929] w-96">
                         <div className='m-auto w-5/6'>
                             <img className='m-auto mt-5 w-40 h-auto' src={logoWhite}/>
-                            <p className='mt-5 text-white text-base font-bold'>
+                            <p className='mt-5 text-white text-base font-[SemplicitaPro]'>
                                 Subscribe to get newest information
                             </p>
                             <div className='mt-5 flex flex-col justify-center'>
                                 <div className='mt-2 flex flex-row'>
                                     <img className='my-auto w-6 h-6' src={fingerPrint}/>
-                                    <p className='ml-2 text-center text-xs text-white font-extrabold'>
+                                    <p className='ml-2 text-center text-xs text-white font-[SemplicitaPro]'>
                                         First Name
                                     </p>
                                     <input type="text" className='ml-2 w-40 h-6 border-[1px] border-[868686] text-xs text-center'
@@ -166,7 +166,7 @@ export default function Coundown() {
                                 </div>
                                 <div className='mt-2 flex flex-row'>
                                     <img className='my-auto w-6 h-6' src={fingerPrint}/>
-                                    <p className='ml-2 text-center text-xs text-white font-extrabold'>
+                                    <p className='ml-2 text-center text-xs text-white font-[SemplicitaPro]'>
                                         Last Name
                                     </p>
                                     <input type="text" className='ml-2 w-40 h-6 border-[1px] border-[868686] text-xs text-center'
@@ -195,7 +195,7 @@ export default function Coundown() {
 
                             }}
                         >
-                            <p className='text-sm text-white font-bold'>
+                            <p className='text-sm text-white font-[SemplicitaPro]'>
                                 SUBSCRIBE
                             </p>
                         </button>
@@ -279,21 +279,21 @@ export default function Coundown() {
 
             <div className='m-auto w-11/12 flex flex-col md:flex-row'>
                 <div className='m-auto w-full md:w-2/5 flex flex-col'>
-                    <p className='text-white text-xs font-bold'>
-                        ——— &nbsp;COMING SOON
+                    <p className='text-[#F2E9D8] text-xs font-[SemplicitaPro]'>
+                        &#8211;&#8211;&#8211;&#8211; &nbsp;&nbsp; COMING &nbsp; SOON
                     </p>
-                    <p className='mt-2 text-white text-4xl font-extrabold'>
+                    <p className='mt-5 text-white text-5xl font-[SemplicitaPro]'>
                         Value prop statement goes right here
                     </p>
                     <div className='mt-5 flex flex-row'>
                         <img src={icon2} className='my-auto w-6 h-6'/>
-                        <p className='ml-3 text-white text-xs'>
+                        <p className='ml-3 text-white text-sm'>
                             Problem/Solution Statement here: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                         </p>
                     </div>
                     <div className='mt-5 flex flex-row'>
                         <img src={icon2} className='my-auto w-6 h-6'/>
-                        <p className='ml-3 text-white text-xs'>
+                        <p className='ml-3 text-white text-sm'>
                             Problem/Solution Statement here: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                         </p>
                     </div>
@@ -306,7 +306,7 @@ export default function Coundown() {
                                 setEmail(event.target.value);
                             }}
                         />
-                        <button onClick={provideEmail} className='my-auto w-2/5 h-10 text-xs md:text-base bg-[#5E5D7F] hover:brightness-125 text-white font-bold'>
+                        <button onClick={provideEmail} className='my-auto w-2/5 h-10 text-xs md:text-base bg-[#5E5D7F] hover:brightness-125 text-white font-[SemplicitaPro]'>
                             Notify me
                         </button>
                     </div>
