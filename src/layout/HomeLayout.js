@@ -47,11 +47,11 @@ export default function HomeLayout() {
                     </div>
                     <div className="w-1/3 flex flex-row justify-center">
                         <a target="_blank" href='https://twitter.com/neuralprint'>
-                            <img className='my-auto hover:brightness-125 w-10 h-10' src={twitterIcon}/>
+                            <img className='my-auto hover:brightness-125 w-12 h-12' src={twitterIcon}/>
                         </a>
                         {/* <div className='m-auto mx-5 rounded-full w-10 h-10 border-[#EBEBEB] border-2 opacity-10'> */}
                         <a target="_blank" href='https://www.linkedin.com/company/neuralprint/'>
-                            <img className='ml-2 my-auto hover:brightness-125 w-10 h-10' src={linkedinIcon}/>
+                            <img className='ml-2 my-auto hover:brightness-125 w-12 h-12' src={linkedinIcon}/>
                         </a>
                         {/* </div> */}
                     </div>
@@ -113,16 +113,16 @@ function Footer() {
                 <div className='flex flex-col'>
                     <img className='w-40 h-auto' src={logoWhite}/>
                     <p className='mt-2 text-white text-[10px] md:text-sm'>
-                        Neuralorint - © 2023 All Rights Reserved.
+                    Neuralprint - © 2023 All Rights Reserved.
                     </p>
                 </div>
                 <div className="my-auto flex flex-row justify-center">
                     <a target="_blank" href='https://twitter.com/neuralprint'>
-                        <img className='hover:brightness-125 w-10 h-10' src={twitterIcon}/>
+                        <img className='hover:brightness-125 w-12 h-12' src={twitterIcon}/>
                     </a>
                     {/* <div className='m-auto mx-5 rounded-full w-10 h-10 border-[#EBEBEB] border-2 opacity-10'> */}
                     <a target="_blank" href='https://www.linkedin.com/company/neuralprint/'>
-                        <img className='ml-2 hover:brightness-125 w-10 h-10' src={linkedinIcon}/>
+                        <img className='ml-2 hover:brightness-125 w-12 h-12' src={linkedinIcon}/>
                     </a>
                     {/* </div> */}
                 </div>

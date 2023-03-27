@@ -5,19 +5,19 @@ import brain from "../images/icons/brain.png";
 
 export default function About() {
     return (
-        <div className="flex flex-col bg-[#292929]">
+        <div className="min-h-screen flex flex-col bg-[#292929]">
 
-            <div className='min-h-screen flex flex-col w-5/6 m-auto'>
+            <div className='flex flex-col w-5/6 m-auto'>
                 <p className='text-white text-center text-2xl md:text-5xl font-[SemplicitaPro]'>About Neuralprint</p>
 
                 <p className='mt-5 text-xl text-white text-center'>Neuralprint is a company on a mission to bring the mind to the forefront of everyday life, to make technology feel like it's barely there, where the mind is able to grant access to all of reality, without barriers.</p>
                 <p className='mt-5 text-xl text-white text-center'>To do this, we're crafting products that leverage the stable and dynamic properties of the mind for everyday life. We see many existing technology products as placeholders for what the mind has the capability to do. Less is more. Our tech aims to remove gaps, not fill them.</p>
                 <p className='mt-5 text-xl text-white text-center'>Cybersecurity is increasingly a crucial ingredient as our lives are evermore always online. From simple logins to permissioning based on state of mind and task-dependent skill level, Neuralprint is the authentication of the future.</p>
 
-                <img className='m-auto mt-5 w-2/3 md:w-80 h-auto' src={brain}/>
+                <img className='mx-auto my-10 w-2/3 md:w-80 h-auto' src={brain}/>
             </div>
 
-            <div className='mt-10 min-h-screen flex flex-col w-5/6 m-auto'>
+            <div className='flex flex-col w-5/6 mx-auto'>
                 <p className='text-white text-center text-2xl md:text-5xl font-[SemplicitaPro]'>About the Founders</p>
 
                 <p className='mt-10 text-xl text-white'>Neuralprint was founded by two neuroscience PhD's and long-time friends Gabriel Axel Montes & Taylor Kuhn. Their passion for the mind and brain came together in a mission to usher a future where the mind is at the center of our digital lives. Gabriel’s expansive understanding of consciousness and mind-training revealed how vastly profound the mind is—and how underutilized it is in everyday life and tech. Taylor’s expertise in neuroimaging and clinical neuropsychological assessment has lent extensive first-hand practical and scientific experience with the cognitive landscapes of a large number of people.</p>

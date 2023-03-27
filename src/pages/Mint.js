@@ -375,7 +375,7 @@ export default function Mint() {
             <div className='m-auto w-5/6 mt-10 flex flex-col md:flex-row justify-center'>
 
                 <div className='w-full md:w-1/2 flex flex-col'>
-                    <p className='text-white text-center md:text-left text-2xl md:text-5xl font-[SemplicitaPro]'>Get your NeuralPrint NFT</p>
+                    <p className='text-white text-center md:text-left text-2xl md:text-5xl font-[SemplicitaPro]'>Get your Neuralprint NFT</p>
                     <img className='inline md:hidden m-auto w-1/2' src={brain}/>
                     
                     <p className='mt-5 text-white text-sm md:text-base'>Our 6-minute psychometric test will securely capture your psychometric profile, which is then used to mint an NFT.</p>

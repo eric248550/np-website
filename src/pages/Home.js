@@ -256,7 +256,7 @@ export default function Home() {
                 <div className='mt-5 mx-auto flex flex-row w-5/6 justify-center'>
                     <img className='my-auto w-8 h-8 md:w-10 md:h-10' src={trangles}/>
                     <p className='ml-3 text-white text-3xl md:text-5xl font-black font-[SemplicitaPro]'>
-                        Neuralprint Test
+                    Neuralprint
                     </p>
                     <img className='my-auto ml-3 w-8 h-8 md:w-10 md:h-10' src={trangles}/>
 
@@ -264,8 +264,8 @@ export default function Home() {
                 <p className='mt-5 text-center text-xs md:text-xl text-white'>Authentication using the mind.</p>
                 <img className='m-auto mt-5 w-2/3 md:w-1/4 h-auto' src={brain}/>
 
-                <button onClick={getNft} className='mt-5 m-auto text-xs font-[SemplicitaPro] md:text-lg bg-[#5E5D7F] hover:brightness-125 text-white font-black w-48 md:w-72 h-12'>
-                    Get your NeuralPrint NFT
+                <button onClick={() => location.replace('/mint')} className='mt-5 m-auto text-xs font-[SemplicitaPro] md:text-lg bg-[#5E5D7F] hover:brightness-125 text-white font-black w-48 md:w-72 h-12'>
+                    Get your Neuralprint NFT
                 </button>
             </div>
 
@@ -273,8 +273,7 @@ export default function Home() {
             <div className='mt-10 w-5/6 m-auto flex flex-col md:flex-row justify-center'>
                 <img className='m-auto w-2/3 md:w-1/3' src={finger}/>
                 <div className='m-auto mt-5 md:w-2/3 md:ml-10 flex flex-col'>
-                    <p className='text-white text-center md:text-left text-4xl md:text-5xl font-[SemplicitaPro]'>Value prop statement</p>
-                    <p className='mt-5 text-white text-base'>Authentication using the mind. Built by neuroscientists.</p>
+                    <p className='text-white text-center md:text-left text-4xl md:text-5xl font-[SemplicitaPro]'>Authentication Using the Mind</p>
                     <li className='mt-2 text-white text-base'>Neuralprint removes the password “middlemen” from authentication, simply allowing the mind to do the work.</li>
                     <li className='mt-2 text-white text-base'>Leveraging the stable and dynamic aspects of your unique neuro-profile, Neuralprint sets the foundation for the dynamic context-driven environments of the Spatial Web, where both a user's identity and their state of mind will hold the keys to seamless everyday life.</li>
 
@@ -289,8 +288,8 @@ export default function Home() {
                         <button onClick={provideEmail} className='m-auto w-1/5 h-10 text-xs md:text-base bg-[#5F8E7A] hover:brightness-125 text-white font-[SemplicitaPro]'>
                             Subscribe
                         </button>
-                        <button onClick={getNft} className='w-2/5 h-10 ml-2 m-auto bg-[#5E5D7F] hover:brightness-125 text-white text-xs md:text-base font-[SemplicitaPro]'>
-                            Get your NeuralPrint NFT
+                        <button onClick={() => location.replace('/mint')} className='w-2/5 h-10 ml-2 m-auto bg-[#5E5D7F] hover:brightness-125 text-white text-xs md:text-base font-[SemplicitaPro]'>
+                            Get your Neuralprint NFT
                         </button>
                     </div>
                 </div>
@@ -300,12 +299,12 @@ export default function Home() {
                 <img className='m-auto inline md:hidden w-2/3' src={trangleArrow}/>
                 <div className='m-auto mt-5 md:w-2/3 flex flex-col'>
                     <p className='text-white text-base'>Our 6-minute psychometric test will securely capture your psychometric profile, which is then used to mint an NFT.</p>
-                    <p className='text-white text-xs'>Your psychometric profile will be securely stored in the cloud in a GDPR-compliant manner, and, for security reasons, is not embedded in the metadata of the NFT.</p>
+                    <p className='text-white text-base'>Your psychometric profile will be securely stored in the cloud in a GDPR-compliant manner, and, for security reasons, is not embedded in the metadata of the NFT.</p>
 
-                    <p className='mt-5 text-white text-4xl md:text-5xl font-[SemplicitaPro]'>Value prop statement</p>
-                    <p className='text-white text-base'>Created by neuroscientists, Neuralprint generates a unique neuro-profile that can be used as a form of authentication. Using a combination of stable and dynamic properties of the brain, we remove barriers between people and technology, prepare people for coming cybersecurity needs, and enabling the direct use of your mind itself to unlock everyday life.</p>
-                    <p className='mt-5 text-white text-4xl md:text-5xl font-[SemplicitaPro]'>Problem</p>
-                    <p className='text-white text-base'>Current authentication technologies are "middlemen" for someone's mind, introducing friction and inconvenience.</p>
+                    <p className='mt-5 text-white text-4xl md:text-5xl font-[SemplicitaPro]'>Unlock Everyday Life</p>
+                    <p className='mt-2 text-white text-base'>Created by neuroscientists, Neuralprint generates a unique neuro-profile that can be used as a form of authentication. Using a combination of stable and dynamic properties of the brain, we remove barriers between people and technology, prepare people for coming cybersecurity needs, and enabling the direct use of your mind itself to unlock everyday life.</p>
+                    <p className='mt-5 text-white text-4xl md:text-5xl font-[SemplicitaPro]'>Own Your Authentication</p>
+                    <p className='mt-2 text-white text-base'>Current authentication technologies are "middlemen" for someone's mind, introducing friction and inconvenience.</p>
                     <p className='text-white text-base'>Passwords and keys are static and ill-suited for the dynamic context-driven environments of Web 3.0, and they fail to offer adequate cybersecurity. There is no way to patch the open wound of password technology. Even a physical key can be lost, whereas the mind is always with you.</p>
 
 
@@ -321,8 +320,8 @@ export default function Home() {
                         <button onClick={provideEmail} className='m-auto w-1/5 h-10 text-xs md:text-base bg-[#5F8E7A] hover:brightness-125 text-white font-[SemplicitaPro]'>
                             Subscribe
                         </button>
-                        <button onClick={getNft} className='w-2/5 h-10 ml-2 m-auto bg-[#5E5D7F] hover:brightness-125 text-white text-xs md:text-base font-[SemplicitaPro]'>
-                            Get your NeuralPrint NFT
+                        <button onClick={() => location.replace('/mint')} className='w-2/5 h-10 ml-2 m-auto bg-[#5E5D7F] hover:brightness-125 text-white text-xs md:text-base font-[SemplicitaPro]'>
+                            Get your Neuralprint NFT
                         </button>
                     </div>
                 </div>
@@ -332,9 +331,8 @@ export default function Home() {
             </div>
             <div className='mt-20 w-5/6 m-auto flex flex-col md:flex-row justify-center'>
                 <div>
-                    <p className='text-white text-4xl md:text-5xl font-[SemplicitaPro]'>Solution</p>
-                    <p className='mt-5 text-white text-base'>Your mind is the key.</p>
-                    <p className='text-white text-base'>Neuralprint resolves the login “middlemen” out of the authentication process, letting your mind take care of the authentication.</p>
+                    <p className='text-white text-4xl md:text-5xl font-[SemplicitaPro]'>Your Mind is the Key</p>
+                    <p className='mt-5 text-white text-base'>Neuralprint resolves the login “middlemen” out of the authentication process, letting your mind take care of the authentication.</p>
                     <p className='text-white text-base'>Psychometric technology securely collects hundreds of data points on an individual (GDPR-compliant) to paint a detailed picture of that person's unique identifying traits.</p>
                     <p className='text-white text-base'>This “static ID” is turned into a user-specific token that can be used as a login credential unto itself.</p>
                     <p className='text-white text-base'>Forthcoming is biometric capability that will offer the ability to refine authentication by adding permissioning based on state of mind, forming dynamic credentials tailored to context (time, space, situation).</p>
@@ -346,7 +344,7 @@ export default function Home() {
             <div className='mt-20 w-5/6 m-auto flex flex-col md:flex-row justify-center'>
                 <img className='m-auto w-2/3 md:w-1/3' src={circle}/>
                 <div className='m-auto mt-5 md:w-2/3 md:ml-10 flex flex-col'>
-                    <p className='text-white text-3xl font-[SemplicitaPro]'>Dynamic States: Bringing the power of the mind to Web 3.0</p>
+                    <p className='text-white text-5xl font-[SemplicitaPro]'>Bringing the power of the mind to Web 3.0</p>
                     <p className='mt-5 text-white text-base'>Neuralprint will be the key to daily life in the emerging Spatial Web.</p>
                     <p className='text-white text-base'>The future of our 3D human world will be the Spatial Web, where the physical and digital intertwine using augmented reality, AI, blockchain, internet of things, robotics, and automation. The Spatial Web is the so-called metaverse in its more maturely realized form, where it becomes an integral element of life in the physical world.</p>
                     <p className='text-white text-base'>In the Spatial Web, context is everything. A fluid cyber-life will be based on permissioned access in dynamic environments.</p>
@@ -362,8 +360,8 @@ export default function Home() {
                         <button onClick={provideEmail} className='m-auto w-1/5 h-10 text-xs md:text-base bg-[#5F8E7A] hover:brightness-125 text-white font-[SemplicitaPro]'>
                             Subscribe
                         </button>
-                        <button onClick={getNft} className='w-2/5 h-10 ml-2 m-auto bg-[#5E5D7F] hover:brightness-125 text-white text-xs md:text-base font-[SemplicitaPro]'>
-                            Get your NeuralPrint NFT
+                        <button onClick={() => location.replace('/mint')} className='w-2/5 h-10 ml-2 m-auto bg-[#5E5D7F] hover:brightness-125 text-white text-xs md:text-base font-[SemplicitaPro]'>
+                            Get your Neuralprint NFT
                         </button>
                     </div>
                 </div>
